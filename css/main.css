@@ -1,0 +1,78 @@
+*{
+  /*el tamaño de cada caja va a tomar el borde*/
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.row:before, .row:after{
+/*agrega un espacio en blanco antes y después de cada row*/
+content: "",
+  /*puede ser display table o dispaly block*/
+  display: table;
+  /*limpia el row al principio y al final*/
+  clear: both;
+}
+
+[class*="col-"]{
+  float: left;
+  height: 70px;
+}
+
+
+img {
+display: block;
+margin: auto;
+margin-top: 30%;
+}
+
+.col-1 {
+width: 100%;
+height:700px;
+background-image: url("../assets/images/sunny-day.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+
+/*.col-1mobile {
+width: 100%;
+height:700px;
+background-image: url("../assets/images/dawn.png");
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+
+}
+
+.col-1mobile2 {
+width: 100%;
+height:700px;
+background-image: url("../assets/images/night.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+
+} */
+
+@media only screen and (max-width: 620px) {
+.container {
+  width: 100%;
+  height:700px;
+  background-image: url("../assets/images/dawn.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+}
+
+
+@media only screen and (max-width: 320px) {
+
+}
